@@ -59,11 +59,11 @@ if(strcasecmp($gStrBtmNetworkId,'mainnet')==0){
 }else{
   //testnet
   define('JOYBLOCK_TOEKN_ASSET_ID','xxxxxxxxxxxxxxxxxxxxxxxxxxxx');  //自己发行的猜谜游戏资产ID
-  define('FUND_BTM_ADDRESS','xxxxxxx'); //游戏发布者钱包地址
+  define('FUND_BTM_ADDRESS','tm1q6xq4pk9snmxxl3pzx9slhx0efzy597y4zaxuh0'); //游戏发布者钱包地址
   define('BTM_NODE_API_TOKEN','');
 
   $gArrayNodeAccounts=array(  
-    array('id'=>'0IOE8PIMG0A02','pwd'=>'******','address'=>'xxxxxxx'), 
+    array('id'=>'0KN9JNBA00A02','pwd'=>'12345','address'=>'tm1q6xq4pk9snmxxl3pzx9slhx0efzy597y4zaxuh0'), 
     array('id'=>'0IOEFJFRG0A04','pwd'=>'******','address'=>'xxxxxxx'),
     array('id'=>'0IP461VU00A02','pwd'=>'******','address'=>'xxxxxxx'),
     array('id'=>'0IP46IDC00A04','pwd'=>'******','address'=>'xxxxxxx'),
