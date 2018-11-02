@@ -1,2 +1,2 @@
 # faucet
-Bytom faucet implemented by
+Bytom faucet implemented by PHP.
