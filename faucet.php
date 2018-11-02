@@ -10,6 +10,7 @@
 /*         PPkPub.org  20180917                   */  
 /*    Released under the MIT License.             */
 
+echo "Hello World!";
 
 require_once "ppk_joyblock.inc.php";
 
