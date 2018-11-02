@@ -22,7 +22,7 @@ if( !(strcasecmp($address_flag,'t')==0 || strcasecmp($address_flag,'s')==0) ){
 ?>
 <h3>比原测试币水龙头（BytomTestnetFaucet）</h3>
 <font size="-2">
-<p>请输入比原测试钱包地址（以字母t起始）来领取测试币。<br>
+<p>请输入比原测试钱包地址（以字母gm起始）来领取测试币。<br>
 Please input Bytom testnet address which is start from t...</p>
 <form name="form_faucet" id="form_faucet" action="faucet.php" method="get">
 <p>

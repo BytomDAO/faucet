@@ -9,7 +9,7 @@ require_once "common_func.php";
 define('PPK_JOY_FLAG','PJOY');
 define('BTM_ASSET_ID','ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff');
 define('TX_GAS_AMOUNT_mBTM',100);
-define('BTM_NODE_API_URL','http://x.x.x.x:9888/');  //此处配置你的比原API的访问地址
+define('BTM_NODE_API_URL','http://0.0.0.0:9888/');  //此处配置你的比原API的访问地址
 define('BTM_EXPLORER_API_URL','https://blockmeta.com/api/v2/');
 
 define('ODIN_PPKJOY_ROOT','ppk:JOY/');
