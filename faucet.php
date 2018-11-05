@@ -106,6 +106,7 @@ $obj_resp=sendBtmTransaction($tmp_post_data,$current_account_info);
 
 if(strcmp($obj_resp['status'],'success')!==0){
     echo "发送比原交易失败，请稍候重试！Failed to send transaction to Bytom blockchain!\n",json_encode($obj_resp);
+    echo "Hello World!1";
     echo "Debug Account:", $current_account_info['id'];
     exit(-1);
 }

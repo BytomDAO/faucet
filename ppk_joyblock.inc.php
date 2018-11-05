@@ -64,10 +64,10 @@ if(strcasecmp($gStrBtmNetworkId,'mainnet')==0){
 
   $gArrayNodeAccounts=array(  
     array('id'=>'0KN9JNBA00A02','pwd'=>'12345','address'=>'tm1q6xq4pk9snmxxl3pzx9slhx0efzy597y4zaxuh0'), 
-    array('id'=>'0IOEFJFRG0A04','pwd'=>'******','address'=>'xxxxxxx'),
-    array('id'=>'0IP461VU00A02','pwd'=>'******','address'=>'xxxxxxx'),
-    array('id'=>'0IP46IDC00A04','pwd'=>'******','address'=>'xxxxxxx'),
-    array('id'=>'0IP472OJ00A06','pwd'=>'******','address'=>'xxxxxxx'),
+    // array('id'=>'0IOEFJFRG0A04','pwd'=>'******','address'=>'xxxxxxx'),
+    // array('id'=>'0IP461VU00A02','pwd'=>'******','address'=>'xxxxxxx'),
+    // array('id'=>'0IP46IDC00A04','pwd'=>'******','address'=>'xxxxxxx'),
+    // array('id'=>'0IP472OJ00A06','pwd'=>'******','address'=>'xxxxxxx'),
   );
 }
 
