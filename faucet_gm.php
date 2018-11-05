@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>BytomTestnetFaucet比原测试币水龙头</title>
+<title>比原链国密测试网水龙头</title>
 <body style="background-image:url(faucet_bg.png);background-repeat:no-repeat">
 
 <?php
@@ -10,9 +10,7 @@
 /*         PPkPub.org  20180917                   */  
 /*    Released under the MIT License.             */
 
-echo "Hello World!";
-
-require_once "ppk_joyblock.inc.php";
+require_once "inc_gm.php";
 
 define('FAUCET_AMOUNT_mBTM',10*1000); //注意单位:mBTM
 
@@ -27,10 +25,7 @@ Please input Bytom testnet address which is start from t...</p>
 <form name="form_faucet" id="form_faucet" action="faucet.php" method="get">
 <p>
 你的比原测试钱包地址：<input type="text" name="your_address" id="your_address" value="" size=50 ><br><br>
-　　可选领取资产类型：<select name="asset_id">
-<option value="">10 BTM</p>
-<option value="<?php echo JOYBLOCK_TOEKN_ASSET_ID;?>">1000 PPkJoyDemoToken</p>
-</select><br><br>
+<br><br>
 　　　　　　　　　　　<input type='submit' id="game_send_trans_btn" value=' 马上免费领取 Get now for free! '> 
 </p>
 </form>
@@ -110,7 +105,7 @@ if(strcmp($obj_resp['status'],'success')!==0){
     exit(-1);
 }
 
-echo '发送比原交易成功，交易ID：<a href="https://blockmeta.com/tx/',$obj_resp['data']['tx_id'],'" target="_blank">',$obj_resp['data']['tx_id'],'</a>',"<br><br>\n";
+echo "发送比原交易成功，交易ID:", $obj_resp['data']['tx_id'];
 echo '请等待2-3分钟得到比原链出块确认，然后打开你的比原钱包即可看到（注意钱包需接入比原测试网络testnet）。';
 echo '<p>返回<a href="./">主页</a></p>
 ';
