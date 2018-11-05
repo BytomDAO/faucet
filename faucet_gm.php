@@ -16,7 +16,7 @@ define('FAUCET_AMOUNT_mBTM',10*1000); //注意单位:mBTM
 
 $your_address = addslashes(@$_REQUEST['your_address']); //避免异常输入字符的安全性问题
 $address_flag=substr($your_address,0,1);
-if( !(strcasecmp($address_flag,'t')==0 || strcasecmp($address_flag,'s')==0) ){
+if( !(strcasecmp($address_flag,'g')==0 || strcasecmp($address_flag,'s')==0) ){
 ?>
 <h3>比原测试币水龙头（BytomTestnetFaucet）</h3>
 <font size="-2">
