@@ -10,7 +10,7 @@ define('PPK_JOY_FLAG','PJOY');
 define('BTM_ASSET_ID','ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff');
 define('TX_GAS_AMOUNT_mBTM',100);
 define('BTM_NODE_API_URL','http://0.0.0.0:9888/');  //此处配置你的比原API的访问地址
-define('BTM_EXPLORER_API_URL','https://blockmeta.com/api/v2/');
+define('BTM_EXPLORER_API_URL','https://blockmeta.com/api/wisdom/');
 
 define('ODIN_PPKJOY_ROOT','ppk:JOY/');
 define('ODIN_PPKJOY_BTM_RESOURCE','ppk:JOY/guessgame/bytom/');
