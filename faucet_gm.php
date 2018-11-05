@@ -20,12 +20,11 @@ if( !(strcasecmp($address_flag,'t')==0 || strcasecmp($address_flag,'s')==0) ){
 ?>
 <h3>比原测试币水龙头（BytomTestnetFaucet）</h3>
 <font size="-2">
-<p>请输入比原测试钱包地址（以字母t起始）来领取测试币。<br>
-Please input Bytom testnet address which is start from t...</p>
-<form name="form_faucet" id="form_faucet" action="faucet.php" method="get">
+<p>请输入比原链国密测试网钱包地址（以gm起始）来领取测试币。<br>
+Please input Bytom testnet address which is start from gm...</p>
+<form name="form_faucet" id="form_faucet" action="faucet_gm.php" method="get">
 <p>
 你的比原测试钱包地址：<input type="text" name="your_address" id="your_address" value="" size=50 ><br><br>
-<br><br>
 　　　　　　　　　　　<input type='submit' id="game_send_trans_btn" value=' 马上免费领取 Get now for free! '> 
 </p>
 </form>
