@@ -18,7 +18,7 @@ $your_address = addslashes(@$_REQUEST['your_address']); //避免异常输入字�
 $address_flag=substr($your_address,0,1);
 if( !(strcasecmp($address_flag,'g')==0 || strcasecmp($address_flag,'s')==0) ){
 ?>
-<h3>比原测试币水龙头（BytomTestnetFaucet）</h3>
+<h3>比原链国密测试网水龙头（BytomGmTestnetFaucet）</h3>
 <font size="-2">
 <p>请输入比原链国密测试网钱包地址（以gm起始）来领取测试币。<br>
 Please input Bytom testnet address which is start from gm...</p>
@@ -29,14 +29,8 @@ Please input Bytom testnet address which is start from gm...</p>
 </p>
 </form>
 
-<p>欢迎捐赠水源到钱包地址：<?php echo $gArrayNodeAccounts[0]['address']; ?> </p>
-<p>去参与<a href="./">“我画你猜”小游戏——基于Bytom比原链实现的DAPP小游戏示例</a></p>
 <P>比原官方钱包的下载和安装说明参考这里：<a href="http://8btc.com/thread-181537-1-1.html" target="_blank">http://8btc.com/thread-181537-1-1.html</a> （注意运行钱包时选择测试网络才能参与领取测试币）<p>
 
-<p>友情开发： <br>
-　　　　　PPk技术社区 - 专注融合区块链和网络通信技术的开放极客社区<br>
-　　　　　<a href="http://ppkpub.org/"  target="_blank">http://ppkpub.org/</a><br>
-</p>
 </font>
 <?php
   exit(0);
@@ -104,7 +98,6 @@ if(strcmp($obj_resp['status'],'success')!==0){
     exit(-1);
 }
 
-echo "发送比原交易成功，交易ID:", $obj_resp['data']['tx_id'];
+echo "发送比原交易成功，交易ID:", $obj_resp['data']['tx_id'], "<br><br>\n";
 echo '请等待2-3分钟得到比原链出块确认，然后打开你的比原钱包即可看到（注意钱包需接入比原测试网络testnet）。';
-echo '<p>返回<a href="./">主页</a></p>
-';
+echo '<p>返回<a href="http://test.blockmeta.com/faucet_gm.php"></a></p>';
