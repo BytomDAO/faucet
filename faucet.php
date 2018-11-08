@@ -95,11 +95,8 @@ if(strlen($asset_id)==0){
     "time_range": '.time().'
   }';
 }
-echo '系统正在处理请求，请耐心等待......';
-//暂停 5 秒
-sleep(5);
+
 $obj_resp=sendBtmTransaction($tmp_post_data,$current_account_info);
-sleep(30);
 
 if(strcmp($obj_resp['status'],'success')!==0){
     echo "发送比原交易失败，请稍候重试！Failed to send transaction to Bytom blockchain!\n",json_encode($obj_resp);
@@ -107,6 +104,9 @@ if(strcmp($obj_resp['status'],'success')!==0){
     exit(-1);
 }
 
+echo '系统正在处理请求，请耐心等待......';
+//暂停 5 秒
+sleep(5);
 echo '发送比原交易成功，交易ID: <a href="http://52.82.46.157:8082/tx/',$obj_resp['data']['tx_id'],'" target="_blank">',$obj_resp['data']['tx_id'],'</a>',"<br><br>\n";
 echo '请等待2-3分钟得到比原链出块确认，然后打开你的比原钱包即可看到（注意钱包需接入比原测试网络testnet）。';
 echo '<p><a href="http://test.blockmeta.com/faucet.php">返回</a></p>';
