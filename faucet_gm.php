@@ -96,7 +96,11 @@ if(strlen($asset_id)==0){
     "time_range": '.time().'
   }';
 }
+echo '系统正在处理请求，请耐心等待......';
+//暂停 5 秒
+sleep(5);
 $obj_resp=sendBtmTransaction($tmp_post_data,$current_account_info);
+sleep(30);
 
 if(strcmp($obj_resp['status'],'success')!==0){
     echo "发送比原交易失败，请稍候重试！Failed to send transaction to Bytom blockchain!\n",json_encode($obj_resp);
