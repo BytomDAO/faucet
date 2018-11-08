@@ -106,10 +106,10 @@ if(strcmp($obj_resp['status'],'success')!==0){
 }
 
 echo '系统正在处理请求，请耐心等待......';
+echo '<br><br>';
 echo "发送比原交易成功，交易ID: ", $obj_resp['data']['tx_id'], "<br><br>\n";
 echo '请等待2-3分钟得到比原链出块确认，然后打开你的比原钱包即可看到（注意钱包需接入比原测试网络testnet）。';
 echo '<p><a href="http://test.blockmeta.com/faucet_gm.php">返回</a></p>';
-sleep(30);
 
 ?>
 
