@@ -1,8 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>比原链国密测试网水龙头</title>
+  <link rel="stylesheet" href="./assets/main.css">
+  <script src="./assets/main.js"></script>
+</head>
+
 <meta charset="UTF-8">
-<title>比原链国密测试网水龙头</title>
+
 <body style="background-image:url(faucet_bg.png);background-repeat:no-repeat">
 
 <?php
@@ -18,20 +26,19 @@ $your_address = addslashes(@$_REQUEST['your_address']); //避免异常输入字�
 $address_flag=substr($your_address,0,1);
 if( !(strcasecmp($address_flag,'g')==0 || strcasecmp($address_flag,'s')==0) ){
 ?>
-<h3>比原链国密测试网水龙头（BytomGmTestnetFaucet）</h3>
-<font size="-2">
-<p>请输入比原链国密测试网钱包地址（以gm起始）来领取测试币。<br>
-Please input Bytom testnet address which is start from gm...</p>
-<form name="form_faucet" id="form_faucet" action="faucet_gm.php" method="get">
-<p>
-你的比原测试钱包地址：<input type="text" name="your_address" id="your_address" value="" size=50 ><br><br>
-　　　　　　　　　　　<input type='submit' id="game_send_trans_btn" value=' 马上免费领取 Get now for free! '> 
-</p>
-</form>
-
-<P>比原官方钱包的下载和安装说明参考这里：<a href="http://8btc.com/thread-181537-1-1.html" target="_blank">http://8btc.com/thread-181537-1-1.html</a> （注意运行钱包时选择测试网络才能参与领取测试币）<p>
-
-</font>
+<div id="particles">
+    <div class="overlay"></div>
+    <div id="intro">
+      <h1>比原链国密测试网水龙头 <br>（BytomGmTestnetFaucet）</h1>
+      <p>请输入比原链国密测试网钱包地址（以gm起始）来领取测试币。</p>
+      <p>Please input Bytom testnet address which is start from gm...</p>
+      <form name="form_faucet" id="form_faucet" action="faucet_gm.php" method="get">
+        <p>您的比原测试钱包地址(Wallet Address)：<input size="50" name="your_address" id="your_address" autofocus="true" type="text"></p>
+        <button type="submit" id="game_send_trans_btn" class="btn">免费领取（Get now for free!）</button>
+      </form>
+      <p>比原官方钱包下载和安装请参考：<a target="_blank" href="http://8btc.com/thread-181537-1-1.html">使用说明</a> （注意运行钱包时选择测试网络才能参与领取测试币）</p>
+    </div>
+  </div>
 <?php
   exit(0);
 }
@@ -101,3 +108,9 @@ if(strcmp($obj_resp['status'],'success')!==0){
 echo "发送比原交易成功，交易ID: ", $obj_resp['data']['tx_id'], "<br><br>\n";
 echo '请等待2-3分钟得到比原链出块确认，然后打开你的比原钱包即可看到（注意钱包需接入比原测试网络testnet）。';
 echo '<p><a href="http://test.blockmeta.com/faucet_gm.php">返回</a></p>';
+
+?>
+
+</body>
+
+</html>
