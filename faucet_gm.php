@@ -11,7 +11,6 @@
 
 <meta charset="UTF-8">
 
-<body style="background-image:url(faucet_bg.png);background-repeat:no-repeat">
 
 <?php
 /* PPK Testnet Faucet DEMO baesd Bytom Blockchain */
