@@ -107,7 +107,6 @@ if(strcmp($obj_resp['status'],'success')!==0){
   echo "<script>alert(\"发送成功，交易ID: ".$tx_id."\")</script>";
 }
 
-
   exit(0);
 }
 
