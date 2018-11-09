@@ -38,6 +38,8 @@ if( !(strcasecmp($address_flag,'t')==0 || strcasecmp($address_flag,'s')==0) ){
 </div>
 </div>
 <?php
+  // exit(0);
+}
 
 $asset_id=addslashes(@$_REQUEST['asset_id']); //避免异常输入字符的安全性问题
 
@@ -107,10 +109,6 @@ if(strcmp($obj_resp['status'],'success')!==0){
   echo "<script>alert(\"发送成功，交易ID: ".$tx_id."\")</script>";
 }
 
-  exit(0);
-}
-
-
 
 
 // echo '系统正在处理请求，请耐心等待......';
@@ -120,6 +118,7 @@ if(strcmp($obj_resp['status'],'success')!==0){
 // echo '<br><br>';
 // echo '<p><a href="http://test.blockmeta.com/faucet.php">返回</a></p>';
 
+exit(0);
 ?>
 
 </body>
