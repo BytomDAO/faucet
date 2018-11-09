@@ -24,7 +24,7 @@ $your_address = addslashes(@$_REQUEST['your_address']); //避免异常输入字�
 $address_flag=substr($your_address,0,1);
 if( !(strcasecmp($address_flag,'t')==0 || strcasecmp($address_flag,'s')==0) ){
   // echo '<script alert("地址格式错误！Address format err！";location.href="http://test.blockmeta.com/faucet.php";</script>;';
-  echo "<script>alert(\"地址格式错误！Address format err！\"),location.href=\"faucet.php\";</script>";
+  // echo "<script>alert(\"地址格式错误！Address format err！\"),location.href=\"faucet.php\";</script>";
 ?>
 <div id="particles">
 <div class="overlay"></div>
