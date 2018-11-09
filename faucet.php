@@ -44,6 +44,11 @@ $address_flag=substr($your_address,0,1);
   // exit(0);
 // }
 
+if(!(strcasecmp($address_flag,'t')==0 || strcasecmp($address_flag,'s')==0)){
+  echo "<script>alert(\"地址格式错误！Address format err！\"),location.href=\"faucet.php\";</script>";
+}
+
+
 $asset_id=addslashes(@$_REQUEST['asset_id']); //避免异常输入字符的安全性问题
 
 $current_account_info=getNextAccountInfo();
