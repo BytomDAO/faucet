@@ -41,10 +41,10 @@ if( !(strcasecmp($address_flag,'t')==0 || strcasecmp($address_flag,'s')==0) ){
 </div>
 
 <?php
-  $redirect = "http://test.blockmeta.com/faucet.php";  
-  echo "<script type='text/javascript'>";  
-  echo "window.location.href='$url'";  
-  echo "</script>";
+  // $redirect = "http://test.blockmeta.com/faucet.php";  
+  // echo "<script type='text/javascript'>";  
+  // echo "window.location.href='$url'";  
+  // echo "</script>";
   exit(0);
 }
 
