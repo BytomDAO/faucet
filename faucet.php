@@ -104,7 +104,7 @@ if(strcmp($obj_resp['status'],'success')!==0){
     exit(-1);
 }else{
   $tx_id=$obj_resp['data']['tx_id'];
-  echo "<script>alert('发送成功，交易ID:'.$tx_id)</script>";
+  echo "<script>alert(\"发送成功，交易ID:".$tx_id."\")</script>";
 }
 
 
