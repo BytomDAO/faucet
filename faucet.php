@@ -40,6 +40,8 @@ if( !(strcasecmp($address_flag,'t')==0 || strcasecmp($address_flag,'s')==0) ){
 
 <?php
   exit(0);
+}else{
+  echo "<script>alert(\"地址格式错误！Address format error！\"),location.href=\"faucet.php\";</script>";
 }
 
 $asset_id=addslashes(@$_REQUEST['asset_id']); //避免异常输入字符的安全性问题
