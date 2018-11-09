@@ -101,11 +101,11 @@ $obj_resp=sendBtmTransaction($tmp_post_data,$current_account_info);
 
 if(strcmp($obj_resp['status'],'success')!==0){
   $tx_err=json_encode($obj_resp);
-  echo "<script>alert(\"发送失败，请稍后重试！Failed to send transaction，please try later！ ".$tx_err."\"),location.href=\"faucet.php\";</script>";
+  echo "<script>alert(\"发送失败，请稍后重试！Failed to send transaction，please try later！ ".$tx_err."\"),location.href=\"faucet_gm.php\";</script>";
     exit(-1);
 }else{
   $tx_id=$obj_resp['data']['tx_id'];
-  echo "<script>alert(\"发送成功，交易ID: ".$tx_id."\"),location.href=\"faucet.php\";</script>";
+  echo "<script>alert(\"发送成功，交易ID: ".$tx_id."\"),location.href=\"faucet_gm.php\";</script>";
 }
 
 ?>
