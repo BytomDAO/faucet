@@ -22,7 +22,7 @@ define('FAUCET_AMOUNT_mBTM',10*1000); //注意单位:mBTM
 
 $your_address = addslashes(@$_REQUEST['your_address']); //避免异常输入字符的安全性问题
 $address_flag=substr($your_address,0,1);
-if( !(strcasecmp($address_flag,'t')==0 || strcasecmp($address_flag,'s')==0) ){
+//if( !(strcasecmp($address_flag,'t')==0 || strcasecmp($address_flag,'s')==0) ){
 ?>
 <div id="particles">
 <div class="overlay"></div>
@@ -37,9 +37,10 @@ if( !(strcasecmp($address_flag,'t')==0 || strcasecmp($address_flag,'s')==0) ){
   <p>比原官方钱包下载和安装请参考：<a target="_blank" href="http://8btc.com/thread-181537-1-1.html">使用说明</a> （注意运行钱包时选择测试网络才能参与领取测试币）</p>
 </div>
 </div>
+
 <?php
-  exit(0);
-}
+  //exit(0);
+//}
 
 $asset_id=addslashes(@$_REQUEST['asset_id']); //避免异常输入字符的安全性问题
 
