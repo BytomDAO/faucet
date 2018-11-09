@@ -38,8 +38,6 @@ if( !(strcasecmp($address_flag,'t')==0 || strcasecmp($address_flag,'s')==0) ){
 </div>
 </div>
 <?php
-  exit(0);
-}
 
 $asset_id=addslashes(@$_REQUEST['asset_id']); //避免异常输入字符的安全性问题
 
@@ -99,13 +97,20 @@ if(strlen($asset_id)==0){
 $obj_resp=sendBtmTransaction($tmp_post_data,$current_account_info);
 
 if(strcmp($obj_resp['status'],'success')!==0){
-    echo "发送比原交易失败，请稍候重试！Failed to send transaction to Bytom blockchain!\n",json_encode($obj_resp);
-    echo "Debug Account:", $current_account_info['id'];
+  $tx_err=json_encode($obj_resp);
+  echo "<script>alert(\"发送失败，请稍后重试！Failed to send transaction，please try later！ ".$tx_err."\")</script>";
+    // echo "发送比原交易失败，请稍候重试！Failed to send transaction to Bytom blockchain!\n",json_encode($obj_resp);
+    // echo "Debug Account:", $current_account_info['id'];
     exit(-1);
 }else{
   $tx_id=$obj_resp['data']['tx_id'];
-  echo "<script>alert(\"发送成功，交易ID:".$tx_id."\")</script>";
+  echo "<script>alert(\"发送成功，交易ID: ".$tx_id."\")</script>";
 }
+
+
+  exit(0);
+}
+
 
 
 
