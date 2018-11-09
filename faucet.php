@@ -23,8 +23,6 @@ define('FAUCET_AMOUNT_mBTM',10*1000); //注意单位:mBTM
 $your_address = addslashes(@$_REQUEST['your_address']); //避免异常输入字符的安全性问题
 $address_flag=substr($your_address,0,1);
 if( !(strcasecmp($address_flag,'t')==0 || strcasecmp($address_flag,'s')==0) ){
-  // echo '<script alert("地址格式错误！Address format err！";location.href="http://test.blockmeta.com/faucet.php";</script>;';
-  // echo "<script>alert(\"地址格式错误！Address format err！\"),location.href=\"faucet.php\";</script>";
 ?>
 <div id="particles">
 <div class="overlay"></div>
@@ -41,17 +39,8 @@ if( !(strcasecmp($address_flag,'t')==0 || strcasecmp($address_flag,'s')==0) ){
 </div>
 
 <?php
-  // $redirect = "http://test.blockmeta.com/faucet.php";  
-  // echo "<script type='text/javascript'>";  
-  // echo "window.location.href='$url'";  
-  // echo "</script>";
   exit(0);
 }
-
-// if(!(strcasecmp($address_flag,'t')==0 || strcasecmp($address_flag,'s')==0)){
-//   echo "<script>alert(\"地址格式错误！Address format err！\"),location.href=\"faucet.php\";</script>";
-// }
-
 
 $asset_id=addslashes(@$_REQUEST['asset_id']); //避免异常输入字符的安全性问题
 
@@ -113,22 +102,11 @@ $obj_resp=sendBtmTransaction($tmp_post_data,$current_account_info);
 if(strcmp($obj_resp['status'],'success')!==0){
   $tx_err=json_encode($obj_resp);
   echo "<script>alert(\"发送失败，请稍后重试！Failed to send transaction，please try later！ ".$tx_err."\"),location.href=\"faucet.php\";</script>";
-    // echo "发送比原交易失败，请稍候重试！Failed to send transaction to Bytom blockchain!\n",json_encode($obj_resp);
-    // echo "Debug Account:", $current_account_info['id'];
     exit(-1);
 }else{
   $tx_id=$obj_resp['data']['tx_id'];
   echo "<script>alert(\"发送成功，交易ID: ".$tx_id."\"),location.href=\"faucet.php\";</script>";
 }
-
-
-
-// echo '系统正在处理请求，请耐心等待......';
-// echo '<br><br>';
-// echo '发送比原交易成功，交易ID: <a href="http://52.82.46.157:8082/tx/',$obj_resp['data']['tx_id'],'" target="_blank">',$obj_resp['data']['tx_id'],'</a>',"<br><br>\n";
-// echo '请等待2-3分钟得到比原链出块确认，然后打开你的比原钱包即可看到（注意钱包需接入比原测试网络testnet）。';
-// echo '<br><br>';
-// echo '<p><a href="http://test.blockmeta.com/faucet.php">返回</a></p>';
 
 ?>
 

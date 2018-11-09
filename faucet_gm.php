@@ -100,17 +100,13 @@ if(strlen($asset_id)==0){
 $obj_resp=sendBtmTransaction($tmp_post_data,$current_account_info);
 
 if(strcmp($obj_resp['status'],'success')!==0){
-    echo "发送比原交易失败，请稍候重试！Failed to send transaction to Bytom blockchain!\n",json_encode($obj_resp);
-    echo "Debug Account:", $current_account_info['id'];
+  $tx_err=json_encode($obj_resp);
+  echo "<script>alert(\"发送失败，请稍后重试！Failed to send transaction，please try later！ ".$tx_err."\"),location.href=\"faucet.php\";</script>";
     exit(-1);
+}else{
+  $tx_id=$obj_resp['data']['tx_id'];
+  echo "<script>alert(\"发送成功，交易ID: ".$tx_id."\"),location.href=\"faucet.php\";</script>";
 }
-
-echo '系统正在处理请求，请耐心等待......';
-echo '<br><br>';
-echo "发送比原交易成功，交易ID: ", $obj_resp['data']['tx_id'], "<br><br>\n";
-echo '请等待2-3分钟得到比原链出块确认，然后打开你的比原钱包即可看到（注意钱包需接入比原测试网络testnet）。';
-echo '<br><br>';
-echo '<p><a href="http://test.blockmeta.com/faucet_gm.php">返回</a></p>';
 
 ?>
 
