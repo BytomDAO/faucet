@@ -26,7 +26,8 @@ if( !(strcasecmp($address_flag,'t')==0 || strcasecmp($address_flag,'s')==0) ){
   $redirect = "http://test.blockmeta.com/faucet.php";  
   echo "<script type='text/javascript'>";  
   echo "window.location.href='$url'";  
-  echo "</script>"; 
+  echo "</script>";
+  exit(0); 
   // echo '<script alert("地址格式错误！Address format err！";location.href="http://test.blockmeta.com/faucet.php";</script>;';
   // echo "<script>alert(\"地址格式错误！Address format err！\"),location.href=\"faucet.php\";</script>";
 ?>
