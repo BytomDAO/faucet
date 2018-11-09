@@ -22,7 +22,7 @@ define('FAUCET_AMOUNT_mBTM',10*1000); //注意单位:mBTM
 
 $your_address = addslashes(@$_REQUEST['your_address']); //避免异常输入字符的安全性问题
 $address_flag=substr($your_address,0,1);
-//if( !(strcasecmp($address_flag,'t')==0 || strcasecmp($address_flag,'s')==0) ){
+if( !(strcasecmp($address_flag,'t')==0 || strcasecmp($address_flag,'s')==0) ){
 ?>
 <div id="particles">
 <div class="overlay"></div>
@@ -39,8 +39,8 @@ $address_flag=substr($your_address,0,1);
 </div>
 
 <?php
-  //exit(0);
-//}
+  exit(0);
+}
 
 $asset_id=addslashes(@$_REQUEST['asset_id']); //避免异常输入字符的安全性问题
 
@@ -101,13 +101,13 @@ $obj_resp=sendBtmTransaction($tmp_post_data,$current_account_info);
 
 if(strcmp($obj_resp['status'],'success')!==0){
   $tx_err=json_encode($obj_resp);
-  echo "<script>alert(\"发送失败，请稍后重试！Failed to send transaction，please try later！ ".$tx_err."\")</script>";
+  echo "<script>alert(\"发送失败，请稍后重试！Failed to send transaction，please try later！ ".$tx_err."\"),location.href=\"faucet.php\";</script>";
     // echo "发送比原交易失败，请稍候重试！Failed to send transaction to Bytom blockchain!\n",json_encode($obj_resp);
     // echo "Debug Account:", $current_account_info['id'];
     exit(-1);
 }else{
   $tx_id=$obj_resp['data']['tx_id'];
-  echo "<script>alert(\"发送成功，交易ID: ".$tx_id."\")</script>";
+  echo "<script>alert(\"发送成功，交易ID: ".$tx_id."\"),location.href=\"faucet.php\";</script>";
 }
 
 
