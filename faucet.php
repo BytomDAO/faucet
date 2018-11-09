@@ -38,7 +38,7 @@ if( !(strcasecmp($address_flag,'t')==0 || strcasecmp($address_flag,'s')==0) ){
 </div>
 </div>
 <?php
-  // exit(0);
+  exit(0);
 }
 
 $asset_id=addslashes(@$_REQUEST['asset_id']); //避免异常输入字符的安全性问题
@@ -118,7 +118,6 @@ if(strcmp($obj_resp['status'],'success')!==0){
 // echo '<br><br>';
 // echo '<p><a href="http://test.blockmeta.com/faucet.php">返回</a></p>';
 
-exit(0);
 ?>
 
 </body>
