@@ -29,7 +29,7 @@ if( !(strcasecmp($address_flag,'t')==0 || strcasecmp($address_flag,'s')==0) ){
 <div id="intro">
   <h1>比原链测试网水龙头 <br>（BytomGmTestnetFaucet）</h1>
   <p>请输入比原链测试网钱包地址（以tm起始）来领取测试币。</p>
-  <p>Please input Bytom testnet address which is start from gm...</p>
+  <p>Please input Bytom testnet address which is start from tm...</p>
   <form name="form_faucet" id="form_faucet" action="faucet.php" method="get">
     <p>您的比原测试钱包地址(Wallet Address)：<input size="50" name="your_address" id="your_address" autofocus="true" type="text"></p>
     <button type="submit" id="game_send_trans_btn" class="btn">免费领取（Get now for free!）</button>
