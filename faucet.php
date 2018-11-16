@@ -27,7 +27,7 @@ if( !(strcasecmp($address_flag,'t')==0 || strcasecmp($address_flag,'s')==0) ){
 <div id="particles">
 <div class="overlay"></div>
 <div id="intro">
-  <h1>比原链测试网水龙头 <br>（BytomGmTestnetFaucet）</h1>
+  <h1>比原链测试网水龙头 <br>（BytomTestnetFaucet）</h1>
   <p>请输入比原链测试网钱包地址（以tm起始）来领取测试币。</p>
   <p>Please input Bytom testnet address which is start from tm...</p>
   <form name="form_faucet" id="form_faucet" action="faucet.php" method="get">
