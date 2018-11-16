@@ -101,7 +101,7 @@ $ git clone https://github.com/bytom/faucet.git
 
 ## 6 Get testnet btm
 
-You can get testnet btm using `--mining` when you launch bytom. You can also contact us to get some testnet btm using issues.
+You can get testnet btm using `--mining` when you launch bytom. You can also contact us to get some testnet btm.
 
 ## 7 Specification
 
