@@ -107,3 +107,7 @@ You can get testnet btm using `--mining` when you launch bytom. You can also con
 
 Don't forget change some accounts and addresses in the code. Your account and address should replace mine. Any issues you can report in the repository.
 
+## 8 Example
+
+- [Bytom testnet faucet](http://test.blockmeta.com/faucet.php)
+- [Bytom gm testnet faucet](http://test.blockmeta.com/faucet_gm.php)
