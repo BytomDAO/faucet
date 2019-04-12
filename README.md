@@ -3,7 +3,7 @@ Faucet
 
 Bytom testnet faucet implemented by PHP.
 
-Two demos using this repository:
+This demo using this repository:
 
 - Bytom testnet faucet: <https://blockmeta.com/tools/faucet>
 
