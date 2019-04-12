@@ -5,8 +5,7 @@ Bytom testnet faucet implemented by PHP.
 
 Two demos using this repository:
 
-- Bytom testnet faucet: <http://test.blockmeta.com/faucet.php>
-- Bytom gm testnet faucet: <http://test.blockmeta.com/faucet_gm.php>
+- Bytom testnet faucet: <https://blockmeta.com/tools/faucet>
 
 ## 1 Install Apache
 
